@@ -28,7 +28,7 @@ export const CountryPage = () => {
           <Link
             onClick={removeCurrentCountry}
             to='/'
-            className='flex items-center bg-white rounded-lg shadow-md py-2 px-6'
+            className='flex items-center bg-white rounded-lg dark:bg-dark-blue dark:text-white shadow-md py-2 px-6'
           >
             <MoveLeft className='mr-2' />
             Back
@@ -40,7 +40,7 @@ export const CountryPage = () => {
             alt={country.name}
             className='rounded-lg w-full h-[12rem] object-cover object-center md:h-[26rem] xl:h-[30rem]'
           />
-          <div>
+          <div className='dark:text-white'>
             <h3 className='font-extrabold text-3xl mb-8'>{country.name}</h3>
             <div className='flex flex-col gap-y-12 md:flex-row md:justify-between items-start'>
               <div className='grid gap-y-4'>
@@ -89,7 +89,7 @@ export const CountryPage = () => {
                     <Link
                       key={index}
                       to={`/countries/${convertToUrlFormat(c.name)}`}
-                      className='bg-white rounded-lg shadow-md py-2 px-6'
+                      className='bg-white rounded-lg shadow-md py-2 px-6 dark:bg-dark-blue dark:text-white'
                       onClick={handleStoreCurrentCountry(c)}
                     >
                       {c.name}

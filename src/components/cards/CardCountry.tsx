@@ -16,7 +16,7 @@ export const CardCountry = ({
   flag,
 }: TCardCountryProps) => {
   return (
-    <article className='rounded-lg overflow-auto shadow-md bg-white md:hover:-translate-y-3 md:hover:duration-200'>
+    <article className='rounded-lg overflow-auto shadow-md bg-white md:hover:-translate-y-3 md:hover:duration-200 dark:bg-dark-blue dark:text-white'>
       <img
         className='h-[12rem] w-full object-cover object-center'
         src={flag}

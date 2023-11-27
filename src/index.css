@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Nunito Sans', sans-serif;
-  background-color: hsl(0, 0%, 98%);
+@layer base {
+  body {
+    font-family: 'Nunito Sans', sans-serif;
+    @apply bg-very-light-gray-l-bg;
+    @apply text-very-dark-blue-l;
+  }
 }
