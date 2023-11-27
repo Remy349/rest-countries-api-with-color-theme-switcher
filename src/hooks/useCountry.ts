@@ -16,7 +16,7 @@ export const useCountry = () => {
   const getCurrentCountry = () => {
     const country = localStorage.getItem('currentCountry')
 
-    return JSON.parse(country)
+    return JSON.parse(country ?? '')
   }
 
   useEffect(() => {
