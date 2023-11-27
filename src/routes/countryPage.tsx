@@ -34,15 +34,15 @@ export const CountryPage = () => {
             Back
           </Link>
         </div>
-        <div className='mt-16 flex flex-col gap-y-12'>
+        <div className='mt-16 grid gap-y-12 lg:grid-cols-2 lg:items-center lg:gap-x-16'>
           <img
             src={country.flags.png}
             alt={country.name}
-            className='rounded-lg w-full object-cover object-center'
+            className='rounded-lg w-full h-[12rem] object-cover object-center md:h-[26rem] xl:h-[30rem]'
           />
           <div>
             <h3 className='font-extrabold text-3xl mb-8'>{country.name}</h3>
-            <div className='flex flex-col gap-y-12'>
+            <div className='flex flex-col gap-y-12 md:flex-row md:justify-between items-start'>
               <div className='grid gap-y-4'>
                 <p className='text-lg'>
                   <span className='font-semibold'>Native Name: </span>
@@ -81,7 +81,7 @@ export const CountryPage = () => {
               </div>
             </div>
             <div className='mt-12 flex flex-col gap-y-4'>
-              <p className='text-xl font-semibold'>Border Countries: </p>
+              <p className='text-xl font-semibold'>Border Countries:</p>
               <div className='flex items-center gap-3 flex-wrap'>
                 {countries
                   .filter((c) => country.borders?.includes(c.alpha3Code))
