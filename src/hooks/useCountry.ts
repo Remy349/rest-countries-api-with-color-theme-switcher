@@ -5,6 +5,20 @@ export const useCountry = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [countries, setCountries] = useState<TCountry[]>([])
 
+  const storeCurrentCountry = (country: TCountry) => {
+    localStorage.setItem('currentCountry', JSON.stringify(country))
+  }
+
+  const removeCurrentCountry = () => {
+    localStorage.removeItem('currentCountry')
+  }
+
+  const getCurrentCountry = () => {
+    const country = localStorage.getItem('currentCountry')
+
+    return JSON.parse(country)
+  }
+
   useEffect(() => {
     const getCountries = async () => {
       try {
@@ -20,5 +34,11 @@ export const useCountry = () => {
     getCountries()
   }, [])
 
-  return { countries, isLoading }
+  return {
+    countries,
+    isLoading,
+    storeCurrentCountry,
+    removeCurrentCountry,
+    getCurrentCountry,
+  }
 }

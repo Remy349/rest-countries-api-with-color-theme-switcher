@@ -3,6 +3,12 @@ export type TCountry = {
   population: number
   region: string
   capital: string
-  alphaCode: string
+  alpha3Code: string
+  subregion: string
+  nativeName: string
+  topLevelDomain: string[]
+  currencies?: [{ name: string }]
+  languages: [{ name: string }]
+  borders?: string[]
   flags: { png: string }
 }

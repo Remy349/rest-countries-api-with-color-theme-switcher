@@ -10,7 +10,7 @@ export const HomePage = () => {
   const [isDropdownClose, setIsDropdownClose] = useState(true)
   const [searchCountry, setSearchCountry] = useState('')
   const [searchCountryByRegion, setSearchCountryByRegion] = useState('')
-  const [filteredCountries, setFilteredCountries] = useState<TCountry>([])
+  const [filteredCountries, setFilteredCountries] = useState<TCountry[]>([])
   const { countries, isLoading } = useCountry()
 
   const handleToggleDropdown = () => {
