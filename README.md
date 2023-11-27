@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Rest countries api with color theme switcher](https://your-live-site-url.com)
+- Live Site URL: [Rest countries api with color theme switcher](https://rest-countries-api-with-color-theme-6e9o.onrender.com/)
 
 ## My process
 
